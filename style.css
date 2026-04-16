@@ -6,27 +6,31 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    min-height: 100vh;
 }
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #333 0%, #555 100%);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     color: white;
     padding: 1rem 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 header h1 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Navigation */
@@ -45,11 +49,13 @@ nav a {
     border-radius: 20px;
     transition: all 0.3s ease;
     background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 nav a:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
 /* Main Content */
@@ -61,48 +67,56 @@ main {
 
 /* Sections */
 section {
-    background-color: white;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     margin-bottom: 2rem;
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 section h2 {
-    color: #333;
+    color: white;
     margin-bottom: 1rem;
-    border-bottom: 2px solid #007BFF;
+    border-bottom: 2px solid #ff6b6b;
     padding-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
 footer {
-    background: linear-gradient(135deg, #333 0%, #222 100%);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     color: white;
     text-align: center;
     padding: 2rem 1rem;
     margin-top: 2rem;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 footer p {
     font-size: 0.9rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Buttons */
 button, .btn {
-    background: linear-gradient(45deg, #007BFF, #0056b3);
+    background: linear-gradient(45deg, #ff6b6b, #ffa500);
     color: white;
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    font-weight: 600;
 }
 
 button:hover, .btn:hover {
-    background-color: #0056b3;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
 }
 
 /* Hero Section */
@@ -267,8 +281,42 @@ button:hover, .btn:hover {
     to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
 section {
     animation: fadeIn 0.8s ease-out;
+}
+
+.btn:hover {
+    animation: pulse 0.6s infinite;
+}
+
+/* Gallery items with hover effects */
+.gallery-item:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Stats with glow */
+.stat {
+    text-align: center;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    min-width: 120px;
+    margin: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.stat:hover {
+    box-shadow: 0 8px 30px rgba(255, 107, 107, 0.5);
+    transform: translateY(-5px);
 }
 
 /* Responsive */
