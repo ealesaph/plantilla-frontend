@@ -8,7 +8,7 @@
     <meta name="author" content="Hewi">
     
     <!-- Título de la página -->
-    <title>Test 1 Front End</title>
+    <title>Landing Page - Tu Producto</title>
     
     <!-- Enlaces a hojas de estilo -->
     <link rel="stylesheet" href="style.css">
@@ -16,21 +16,56 @@
 <body>
     <!-- Encabezado del sitio -->
     <header>
-        <h1>Bienvenido</h1>
+        <h1>Tu Producto</h1>
         <nav>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#acerca">Acerca de</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#features">Características</a></li>
+                <li><a href="#about">Acerca de</a></li>
+                <li><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Contenido principal -->
     <main>
-        <section id="inicio">
-            <h2>Sección Principal</h2>
-            <p>Contenido de la página aquí.</p>
+        <!-- Sección Hero -->
+        <section id="hero">
+            <h2>Bienvenido a Tu Producto</h2>
+            <p>La solución perfecta para tus necesidades. Descubre cómo podemos ayudarte.</p>
+            <button class="btn">Comenzar Ahora</button>
+        </section>
+
+        <!-- Sección de Características -->
+        <section id="features">
+            <h2>Características Principales</h2>
+            <div class="feature-list">
+                <div class="feature">
+                    <h3>Rápido</h3>
+                    <p>Procesamiento ultrarrápido para máxima eficiencia.</p>
+                </div>
+                <div class="feature">
+                    <h3>Seguro</h3>
+                    <p>Protección avanzada de datos y privacidad.</p>
+                </div>
+                <div class="feature">
+                    <h3>Fácil de Usar</h3>
+                    <p>Interfaz intuitiva diseñada para todos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Acerca de -->
+        <section id="about">
+            <h2>Acerca de Nosotros</h2>
+            <p>Somos un equipo apasionado por crear soluciones innovadoras que mejoran la vida de nuestros usuarios.</p>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contact">
+            <h2>Contáctanos</h2>
+            <p>¿Listo para empezar? Ponte en contacto con nosotros.</p>
+            <button class="btn">Enviar Mensaje</button>
         </section>
     </main>
 
